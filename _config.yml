@@ -11,7 +11,7 @@ email: byungjun0689@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   This WebPages are about Various Data Analytics Tech for Beginner
 
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://byungjun0689.github.io" # the base hostname & protocol for your site
 
 #sidebar
