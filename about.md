@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: 'This Page for Studing DataScience for Beginner (I'm also beginner)'
+description: 'This Page for Beginner (I'm also beginner) Studing DataScience'
 permalink: /about/
 ---
  Byungjun Lee
