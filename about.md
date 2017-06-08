@@ -9,16 +9,16 @@ tags:
 - About Me
 
 ---
- ## Byungjun Lee
+  # Byungjun Lee
   - Working at Hanjin Information Systems & Telecommunication Co.
+  - Enrolled in the Master Degree of Big Data MBA at Kookmin Univ
 
-  ### Win App Programmer
+  ## Win App Programmer
    - Visual Basic
    - Cache DB
-   - PHP
    - C#
 
-  ### Beginner, Data Science
+  ## Beginner, Data Science
    - Python
    - R
    - Data Analytics
