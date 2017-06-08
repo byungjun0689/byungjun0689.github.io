@@ -233,7 +233,7 @@ image(trans[1:10])
 
 
 
-![png](lotto1.png)
+![png](src/0608/img/lotto1.png)
 
 
 ### Check Frequency of items 
@@ -282,7 +282,7 @@ itemFrequencyPlot(trans, topN = 20, main = "support top 20 items",cex.names=0.6)
 ```
 
 
-![png](lotto2.png)
+![png](src/0608/img/lotto2.png)
 
 
 ## Making rules with transaction data, Lotte 
