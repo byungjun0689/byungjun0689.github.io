@@ -1,14 +1,14 @@
 ---
 layout: page
 title: About
-introduction: 'This Page for Beginner (I'm also beginner) Studing DataScience'
+introduction:  "This Page for Beginner (I'm also beginner) Studing DataScience"
 permalink: /about/
 main-class: 'About'
 color: '#B31917'
 tags:
 - About Me
-
 ---
+
   # Byungjun Lee
   - Working at Hanjin Information Systems & Telecommunication Co.
   - Enrolled in the Master Degree of Big Data MBA at Kookmin Univ

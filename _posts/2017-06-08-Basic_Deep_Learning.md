@@ -2,7 +2,7 @@
 layout: post
 title: "Basic Deep Learning"
 date: 2017-06-08 13:34:26
-image: '/assets/img/'
+img: deeplearning.PNG
 description: 'Deep Learning Basic.'
 main-class: 'jekyll'
 color: '#B31917'

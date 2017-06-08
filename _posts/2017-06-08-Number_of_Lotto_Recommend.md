@@ -2,7 +2,7 @@
 layout: post
 title: "Lotto Number Recommend with Association Rules Using R"
 date: 2017-06-08 21:34:26
-image: '/assets/img/'
+img: lotto.png
 description: 'Lotto'
 main-class: 'R'
 color: '#B31917'
