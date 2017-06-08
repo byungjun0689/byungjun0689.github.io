@@ -18,10 +18,10 @@ introduction: 'Deep Learning Basic Concept.'
 # Basic_Deep_Learning
 
 ### 우리가 이미 알고 있는 것.
- - 1. Regression : $ y = ax + b $ <- Hypothesis (식)
- - 2. Cost => Minimize
-![img3](src/0608/data/3.png)
-![img1](src/0608/data/1.PNG)
+ - Regression : $ y = ax + b $ <- Hypothesis (식)
+ - Cost => Minimize
+![img3](/src/0608/data/3.png)
+![img1](/src/0608/data/1.PNG)
 
 
 ### Cost
@@ -31,10 +31,10 @@ introduction: 'Deep Learning Basic Concept.'
 
 ## Gradient Descent (경사하강법)
  - 위의 Cost값을 최소한으로 하는 W를 찾아내는 방법을 Gradient Descent라 한다.
-![img2](src/0608/data/7.PNG)
-![img2](src/0608/data/4.png)
-![img2](src/0608/data/5.png)
-![img2](src/0608/data/6.png)
+![img2](/src/0608/data/7.PNG)
+![img2](/src/0608/data/4.png)
+![img2](/src/0608/data/5.png)
+![img2](/src/0608/data/6.png)
 
 ## 신경망의 특징
  - 신경망의 경우 활성화 되고 안되고 즉, 결과값이 0 또는 1값을 가지게 된다.
@@ -72,28 +72,28 @@ introduction: 'Deep Learning Basic Concept.'
  - 그러므로 중간 Hidden layer에는 사용할 수 있지만 결과값의 출력하는 부분에서는 사용 할 수 없다.
 
 
-![img3](src/0608/img/3.PNG)
+![img3](/src/0608/img/3.PNG)
 
 ## XOR 문제
-![img4](src/0608/img/4.PNG)
-![img5](src/0608/img/5.PNG)
-![img6](src/0608/img/6.PNG)
-![img7](src/0608/img/7.PNG)
+![img4](/src/0608/img/4.PNG)
+![img5](/src/0608/img/5.PNG)
+![img6](/src/0608/img/6.PNG)
+![img7](/src/0608/img/7.PNG)
 
 ## BackPropagation
-![img13](src/0608/img/13.PNG)
+![img13](/src/0608/img/13.PNG)
 
 ### Cost Minimize
  - Gradient Descent 를 이용하여 Cost 를 감소 시켜야 한다.
 
-![img14](src/0608/img/14.PNG)
+![img14](/src/0608/img/14.PNG)
 
 ## 미분 특징
  - <a href="https://youtu.be/oZyvmtqLmLo">Sung Kim교수의 미분 강의 </a>
 
-![img15](src/0608/img/15.PNG)
+![img15](/src/0608/img/15.PNG)
 
-![img16](src/0608/img/16.PNG)
+![img16](/src/0608/img/16.PNG)
 
 #### 위의 미분 결과값에 의해 가중치들을 조절할 수가 있다.
  - 내가 원하는 값보다 크게 나왔다면 - 영향이 있는 놈을 높이고 + 영향이 있는 놈을 낮추면 된다.
@@ -477,18 +477,18 @@ from keras.optimizers import RMSprop
  - 우리는 Logistic Regression을 알고 있다. (A or B / 1 or 0) 과 같이 2개의 값을 구별할 때 사용하는 Step function
  - 이러한 내용을 Muliti Categorial Label 을 구별할 때는 단독으로는 사용할 수 없다.
 
-![img17](src/0608/img/17.PNG)
-![img18](src/0608/img/18.PNG)
-![img19](src/0608/img/19.PNG)
-![img20](src/0608/img/20.PNG)
-![img21](src/0608/img/21.PNG)
-![img22](src/0608/img/22.PNG)
-![img23](src/0608/img/23.PNG)
-![img24](src/0608/img/24.PNG)
-![img25](src/0608/img/25.PNG)
-![img26](src/0608/img/26.PNG)
-![img27](src/0608/img/27.PNG)
-![img28](src/0608/img/28.PNG)
+![img17](/src/0608/img/17.PNG)
+![img18](/src/0608/img/18.PNG)
+![img19](/src/0608/img/19.PNG)
+![img20](/src/0608/img/20.PNG)
+![img21](/src/0608/img/21.PNG)
+![img22](/src/0608/img/22.PNG)
+![img23](/src/0608/img/23.PNG)
+![img24](/src/0608/img/24.PNG)
+![img25](/src/0608/img/25.PNG)
+![img26](/src/0608/img/26.PNG)
+![img27](/src/0608/img/27.PNG)
+![img28](/src/0608/img/28.PNG)
 
 
 ```python
@@ -498,7 +498,7 @@ model.add(Dense(10, activation='softmax'))
 ```
 
 ### Activation : tanh graph
-![img9](src/0608/data/12.PNG)
+![img9](/src/0608/data/12.PNG)
 
 
 ```python
