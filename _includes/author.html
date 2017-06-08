@@ -1,21 +1,12 @@
-{% if post.author %}
-  {% assign author = post.author %}
-{% elsif page.author %}
-  {% assign author = page.author %}
-{% else %}
-  {% assign author = site.author %}
-{% endif %}
-{% if author %}
-    <span class="author">Posted by
-        {% assign the_author = site.data.authors | where: 'id', author %}
-        {% for author in the_author %}
-            <a href="{{ site.author_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ author.id }}">
-                {% if author.name %}
-                    {{ author.name }}
-                {% else %}
-                    {{ author.id }}
-                {% endif %}
-            </a>
-        {% endfor %}
-    </span>
-{% endif %}
+<section class="author" itemprop="author">
+    <div class="details" itemscope itemtype="http://schema.org/Person">
+        <img itemprop="image" class="img-rounded" src="/assets/img/blog-author.jpg" alt="{{site.name}}">
+        <p class="def">Author</p>
+        <h3 class="name">
+            <a itemprop="name" href="https://plus.google.com/+{{site.gplus_username}}/posts">{{site.username}}</a>
+        </h3>
+        <p class="desc">{{site.user_description}}</p>
+        <p><a itemprop="email" class="email" href="mailto:{{site.email}}">{{site.email}}</a></p>
+        <p><a itemprop="github" class="github" href="https://github.com/{{site.github_username}}">github.com/{{site.github_username}}</a></p>
+    </div>
+</section>
