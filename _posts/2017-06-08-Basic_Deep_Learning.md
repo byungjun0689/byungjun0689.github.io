@@ -206,7 +206,7 @@ plt.imshow(x_train[4,], cmap='gray')
 
 
 
-![png](output_24_1.png)
+![png](/src/0608/img/output_24_1.png)
 
 
 
