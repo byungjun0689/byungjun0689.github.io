@@ -15,7 +15,7 @@ twitter_text: 'Deep Learning Basic Concept.'
 introduction: 'Deep Learning Basic Concept.'
 ---
 
-# Basic_Deep_Learning
+DeepLearning Basic information (Neural Network, Back Propagation Etc...)
 
 ### 우리가 이미 알고 있는 것.
  - Regression : $ y = ax + b $ <- Hypothesis (식)
