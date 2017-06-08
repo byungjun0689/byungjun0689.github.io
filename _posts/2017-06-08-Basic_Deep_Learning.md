@@ -42,12 +42,12 @@ introduction: 'Deep Learning Basic Concept.'
   - X라는 값으로 Y로 출력
   - X라는 값이 입력될 때 가중치 W가 적용되고 각 값에 대해서 Bias (B)가 가해 진다.
   - 즉, $W*X + b$
-![img1](img/1.PNG)
-![img9](data/8.PNG)
-![img9](data/9.PNG)
+![img1](/src/0608/img/1.PNG)
+![img9](/src/0608/data/8.PNG)
+![img9](/src/0608/data/9.PNG)
 
 ## 위의 기본 컨셉을 함수로 표현가능하다고 생각하다는 것에서 시작
-![img2](img/2.PNG)
+![img2](/src/0608/img/2.PNG)
 
 - 위의 함수 즉, 뉴랄을 가지고는 and 또는 or 문제는 해결이 가능하다.
  - 하지만, xor 문제는 단순한 선형 직선으로 풀 수 없는 문제로 발견. Neural Net의 발전이 멈추는 계기가 되었다.
@@ -56,16 +56,16 @@ introduction: 'Deep Learning Basic Concept.'
 
  - 이러한 값을 조절해주는 것이 $Step \ Function$ (계단 함수라고 한다.)
 ## 계단 함수
-![img9](data/10.PNG)
+![img9](/src/0608/data/10.PNG)
 
 ### 시그모이드
-![img9](data/11.PNG)
+![img9](/src/0608/data/11.PNG)
 
 ### 쌍탄젠트
-![img9](data/12.PNG)
+![img9](/src/0608/data/12.PNG)
 
 ### Relu
-![img9](data/13.PNG)
+![img9](/src/0608/data/13.PNG)
 
 
 #### ReLu의 경우 0~ 무한대 값을 가진다.
