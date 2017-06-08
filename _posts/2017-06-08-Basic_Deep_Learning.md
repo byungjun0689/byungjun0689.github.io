@@ -18,15 +18,15 @@ introduction: 'Deep Learning Basic Concept.'
 DeepLearning Basic information (Neural Network, Back Propagation Etc...)
 
 ### 우리가 이미 알고 있는 것.
- - Regression : $ y = ax + b $ <- Hypothesis (식)
+ - Regression : $$ y = ax + b $$ <- Hypothesis (식)
  - Cost => Minimize
 ![img3](/src/0608/data/3.png)
 ![img1](/src/0608/data/1.PNG)
 
 
 ### Cost
- - $H(x) = Wx$ 간단하게 표현
- - $Cost(W) = \sum_{1}^{m}({Wx}^{i}-{y}^{i})^2$
+ - $$H(x) = Wx$$ 간단하게 표현
+ - $$Cost(W) = \sum_{1}^{m}({Wx}^{i}-{y}^{i})^2$$
  - W 값을 변경해 가면서 Cost값이 가장 낮은 곳을 찾는다.
 
 ## Gradient Descent (경사하강법)
@@ -41,7 +41,7 @@ DeepLearning Basic information (Neural Network, Back Propagation Etc...)
   - 최종 Output의 경우 적용 되는 부분
   - X라는 값으로 Y로 출력
   - X라는 값이 입력될 때 가중치 W가 적용되고 각 값에 대해서 Bias (B)가 가해 진다.
-  - 즉, $W*X + b$
+  - 즉, $$W*X + b$$
 ![img1](/src/0608/img/1.PNG)
 ![img9](/src/0608/data/8.PNG)
 ![img9](/src/0608/data/9.PNG)
@@ -54,7 +54,7 @@ DeepLearning Basic information (Neural Network, Back Propagation Etc...)
  - 위의 문제를 해결하기 위해서 아래와 같은 그림으로 Multi Layer Perceptron으로 해결이 가능하며, 이 가중치를 학습하는 방법이 Back Propagation이다.
 
 
- - 이러한 값을 조절해주는 것이 $Step \ Function$ (계단 함수라고 한다.)
+ - 이러한 값을 조절해주는 것이 $$Step \ Function$$ (계단 함수라고 한다.)
 ## 계단 함수
 ![img9](/src/0608/data/10.PNG)
 
