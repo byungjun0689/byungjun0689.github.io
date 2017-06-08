@@ -1,7 +1,7 @@
 # Site settings
 title: Byungjun's Data Science
 description: A blog about Data Science
-baseurl: "/byungjun0689.github.io" # the subpath of your site, e.g. /blog
+baseurl: "/GithubPages" # the subpath of your site, e.g. /blog
 url: "nonfight.club/DS" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
