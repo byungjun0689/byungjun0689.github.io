@@ -1,18 +1,24 @@
 ---
 layout: page
 title: About
-description: 'This Page for Beginner (I'm also beginner) Studing DataScience'
+introduction: 'This Page for Beginner (I'm also beginner) Studing DataScience'
 permalink: /about/
+main-class: 'About'
+color: '#B31917'
+tags:
+- About Me
+
 ---
- Byungjun Lee
+ ## Byungjun Lee
   - Working at Hanjin Information Systems & Telecommunication Co.
-  - Win App Programmer
+
+  ### Win App Programmer
    - Visual Basic
    - Cache DB
    - PHP
    - C#
 
-  - Beginner, Data Science
+  ### Beginner, Data Science
    - Python
    - R
    - Data Analytics
