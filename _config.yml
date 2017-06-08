@@ -1,44 +1,55 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-title: Byungjun's Data Science
-description: A blog about Data Science
-#baseurl: "/byungjun0689.github.io" # the subpath of your site, e.g. /blog
-url: "http://byungjun0689.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
-
-# User settings
-username: Lee Byungjun
-user_description: Lee Byungjun Data Science Pages
+title: DataScience for Beginner
 email: byungjun0689@gmail.com
-github_username:  byungjun0689@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  This WebPages are about Various Data Analytics Tech for Beginner
 
+baseurl: "/DSB" # the subpath of your site, e.g. /blog
+url: "http://byungjun0689.github.io" # the base hostname & protocol for your site
+
+#sidebar
+default-image: webjeda-logo-big.jpg # If there is no featured image in a post then this image will be showed. Also on all pages this image will be showed. Use a 500x250 image.
+
+#footer
+built-by: Lee Byungjun
+copyright:
+   name: JunL
+   link: 'http://jtoday.tistory.com/'
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
 permalink: /:title/
+paginate: 6
+paginate_path: /page:num/
 
+# Tracker
+#analytics: UA-83979019-1
 
-# html minify
-#compress_html:
-#  clippings: all
-#  comments: all
-#  endings: []
-#  profile: false
-
-# Links to include in menu navigation
-# For external links add external: true
-#links:
-#  - title: Home
-#    url: /
-#  - title: Series
-#    url: /series
-#  - title: Tags
-#    url: /tags
-#  - title: About Me
-#    url: /about
-
-# exclude my node related stuff
-#exclude: ['package.json', 'src', 'node_modules']
+# Comments
+#disqus-shortname: webjeda-demo
 
 #social
-github: https://github.com/byungjun0689
-facebook: https://www.facebook.com/2byungjun
+facebook: http://facebook.com/2byungjun
+#quora: http://quora.com/sharathdt
+#twitter: http://twitter.com/@webjeda
+github: http://github.com/byungjun0689
+
+#facebook like box
+#fb-app-id: 549480635219583
+#fb-page-url: https://www.facebook.com/webjeda/
+#fb-page-title: webjeda
+
+# Sass style
+sass:
+  style: compressed
+
+# Ruby Gems
+gems: [jekyll-paginate, jekyll-seo-tag]
+
