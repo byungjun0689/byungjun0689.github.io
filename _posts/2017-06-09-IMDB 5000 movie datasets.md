@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "IMDB Movie's ratings Dataset"
@@ -6,9 +5,6 @@ date: 2017-06-09 11:34:26
 img: IMDB.png
 description: 'IMDB Movie Ratings'
 main-class: 'Python'
-tags:
-- Python
-- IMDB Datasets Analytics
 ---
 
 # Background
