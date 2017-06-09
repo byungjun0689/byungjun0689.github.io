@@ -34,7 +34,7 @@ lotte <- lotte[,-8]
 colnames(lotte) <- c("seq","N1","N2","N3","N4","N5","N6")
 ```
 
-## 회차 별 뽑힌 숫자. 
+## 회차 별 뽑힌 숫자.
  - 보너스 숫자 제외
 
 
@@ -49,10 +49,10 @@ print(head(lotte[order(lotte$seq, decreasing = F),]))
     727   4 14 27 30 31 40 42
     726   5 16 24 29 40 41 42
     725   6 14 15 26 27 40 42
-    
 
-## Data Reshaping 
- - $Transacition\ Data$ 형성을 위해 $Reshape$ ($Melt$를  $seq$를 기준으로 수행)
+
+## Data Reshaping
+ - $$Transacition\ Data$$ 형성을 위해 $$Reshape$$ ($$Melt$$를  $$seq$$를 기준으로 수행)
 
 
 ```R
@@ -71,7 +71,7 @@ print(melt_lotte[melt_lotte$seq ==730,]) # 확인
     2191 730       N4    15
     2921 730       N5    18
     3651 730       N6    22
-    
+
 
 ## Pick data from DF
 
@@ -92,10 +92,10 @@ print(head(data[order(data$seq,decreasing = T),]))
     2191 730    15
     2921 730    18
     3651 730    22
-    
+
 
 # Split Data with seq number
- - $Value$를 $Seq$로 $Split$한다.
+ - $$Value$$를 $$Seq$$로 $$Split$$한다.
 
 
 ```R
@@ -104,30 +104,30 @@ print(head(split(data$value, data$seq)))
 
     $`1`
     [1] 10 23 29 33 37 40
-    
+
     $`2`
     [1]  9 13 21 25 32 42
-    
+
     $`3`
     [1] 11 16 19 21 27 31
-    
+
     $`4`
     [1] 14 27 30 31 40 42
-    
+
     $`5`
     [1] 16 24 29 40 41 42
-    
+
     $`6`
     [1] 14 15 26 27 40 42
-    
-    
 
-## Make Transactions 
+
+
+## Make Transactions
 
 
 ```R
-trans <- as(split(data$value, data$seq), "transactions") #transactions 메소드 
-trans 
+trans <- as(split(data$value, data$seq), "transactions") #transactions 메소드
+trans
 ```
 
 
@@ -137,7 +137,7 @@ trans
 
 
 ## Inspect a transaction
- - 각 회차별 나온 숫자를 Transaction으로 변형 
+ - 각 회차별 나온 숫자를 Transaction으로 변형
 
 
 ```R
@@ -145,16 +145,16 @@ print(inspect(trans[1:10]))
 ```
 
          items               transactionID
-    [1]  {10,23,29,33,37,40} 1            
-    [2]  {9,13,21,25,32,42}  2            
-    [3]  {11,16,19,21,27,31} 3            
-    [4]  {14,27,30,31,40,42} 4            
-    [5]  {16,24,29,40,41,42} 5            
-    [6]  {14,15,26,27,40,42} 6            
-    [7]  {2,9,16,25,26,40}   7            
-    [8]  {8,19,25,34,37,39}  8            
-    [9]  {2,4,16,17,36,39}   9            
-    [10] {9,25,30,33,41,44}  10           
+    [1]  {10,23,29,33,37,40} 1
+    [2]  {9,13,21,25,32,42}  2
+    [3]  {11,16,19,21,27,31} 3
+    [4]  {14,27,30,31,40,42} 4
+    [5]  {16,24,29,40,41,42} 5
+    [6]  {14,15,26,27,40,42} 6
+    [7]  {2,9,16,25,26,40}   7
+    [8]  {8,19,25,34,37,39}  8
+    [9]  {2,4,16,17,36,39}   9
+    [10] {9,25,30,33,41,44}  10
                        items transactionID
     [1]  {10,23,29,33,37,40}             1
     [2]   {9,13,21,25,32,42}             2
@@ -166,9 +166,9 @@ print(inspect(trans[1:10]))
     [8]   {8,19,25,34,37,39}             8
     [9]    {2,4,16,17,36,39}             9
     [10]  {9,25,30,33,41,44}            10
-    
 
-## Image of Transaction 
+
+## Image of Transaction
  - 1 ~ 45 까지 숫자 중 각 회차별 새당 되는 숫자에 색이 칠해진다.
 
 
@@ -183,7 +183,7 @@ image(trans[1:10])
 ![png](/src/0608/img/lotto1.png)
 
 
-### Check Frequency of items 
+### Check Frequency of items
  - 각 회차에 나온 개별의 숫자들의 빈발 정도를 확인 (absolute : Counts of values)
 
 
@@ -197,10 +197,10 @@ print(t(itemFrequency(trans, type="absolute")))
     [1,] 82 90 95 99 100 111 85 91 87 98 85 101 113 92 96 108 91 99 114 86 87 101
           44 45
     [1,] 100 98
-    
 
-### Check Posibility of items 
- - 각 회차에 나온 개별 숫자들의 나온 확률을 확인 
+
+### Check Posibility of items
+ - 각 회차에 나온 개별 숫자들의 나온 확률을 확인
 
 
 ```R
@@ -213,9 +213,9 @@ print(t(round(itemFrequency(trans)[order(itemFrequency(trans), decreasing = TRUE
     [1,] 0.14 0.14 0.14 0.14 0.14 0.14 0.14 0.14 0.13 0.13 0.13 0.13 0.13 0.13 0.13
            12   35    6   29   38   21   23   16   30   42   41   28   32   22   9
     [1,] 0.13 0.13 0.12 0.12 0.12 0.12 0.12 0.12 0.12 0.12 0.12 0.12 0.12 0.11 0.1
-    
 
-### Plotting items with support 
+
+### Plotting items with support
  - 상위 20개 지지도를 가진 Items를 Plotting
 
 
@@ -228,9 +228,9 @@ itemFrequencyPlot(trans, topN = 20, main = "support top 20 items",cex.names=0.6)
 ![png](/src/0608/img/lotto2.png)
 
 
-## Making rules with transaction data, Lotte 
- - 최소 지지도를 넘는 빈발 집합을 출력. 
- - Transaction ID 는 필요 없으므로 제외 
+## Making rules with transaction data, Lotte
+ - 최소 지지도를 넘는 빈발 집합을 출력.
+ - Transaction ID 는 필요 없으므로 제외
 
 
 ```R
@@ -238,19 +238,19 @@ rules <- apriori(trans[,-2],parameter = list(support=0.005,target="frequent item
 ```
 
     Apriori
-    
+
     Parameter specification:
      confidence minval smax arem  aval originalSupport maxtime support minlen
              NA    0.1    1 none FALSE            TRUE       5   0.005      1
      maxlen            target   ext
          10 frequent itemsets FALSE
-    
+
     Algorithmic control:
      filter tree heap memopt load sort verbose
         0.1 TRUE TRUE  FALSE TRUE    2    TRUE
-    
-    Absolute minimum support count: 3 
-    
+
+    Absolute minimum support count: 3
+
     set item appearances ...[0 item(s)] done [0.00s].
     set transactions ...[44 item(s), 730 transaction(s)] done [0.00s].
     sorting and recoding items ... [44 item(s)] done [0.00s].
@@ -258,13 +258,13 @@ rules <- apriori(trans[,-2],parameter = list(support=0.005,target="frequent item
     checking subsets of size 1 2 3 done [0.00s].
     writing ... [1241 set(s)] done [0.00s].
     creating S4 object  ... done [0.00s].
-    
 
- - 크기 1 : 44개 
+
+ - 크기 1 : 44개
  - 크기 2 : 941개
- - 크기 3 : 256개 
- 
-### summary of quality measures 
+ - 크기 3 : 256개
+
+### summary of quality measures
  - 최소 지지도 : 0.0055
  - 최대 지지도 : 0.1589
 
@@ -275,29 +275,29 @@ summary(rules)
 
 
     set of 1241 itemsets
-    
+
     most frequent items:
-         40      20      27       7      35 (Other) 
-         76      74      70      68      68    2338 
-    
+         40      20      27       7      35 (Other)
+         76      74      70      68      68    2338
+
     element (itemset/transaction) length distribution:sizes
-      1   2   3 
-     44 941 256 
-    
-       Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-      1.000   2.000   2.000   2.171   2.000   3.000 
-    
+      1   2   3
+     44 941 256
+
+       Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1.000   2.000   2.000   2.171   2.000   3.000
+
     summary of quality measures:
-        support        
-     Min.   :0.005479  
-     1st Qu.:0.008219  
-     Median :0.013699  
-     Mean   :0.017469  
-     3rd Qu.:0.017808  
-     Max.   :0.158904  
-    
-    includes transaction ID lists: FALSE 
-    
+        support
+     Min.   :0.005479
+     1st Qu.:0.008219
+     Median :0.013699
+     Mean   :0.017469
+     3rd Qu.:0.017808
+     Max.   :0.158904
+
+    includes transaction ID lists: FALSE
+
     mining info:
             data ntransactions support confidence
      trans[, -2]           730   0.005          1
@@ -308,7 +308,7 @@ summary(rules)
 inspect(rules[1:10])
 ```
 
-         items support   
+         items support
     [1]  {9}   0.09863014
     [2]  {22}  0.11232877
     [3]  {28}  0.11643836
@@ -319,16 +319,16 @@ inspect(rules[1:10])
     [8]  {16}  0.12191781
     [9]  {21}  0.12328767
     [10] {23}  0.12328767
-    
+
 
 ### Top 10 of the Support
 
 
 ```R
-inspect(sort(rules, by = "support")[1:10]) 
+inspect(sort(rules, by = "support")[1:10])
 ```
 
-         items support  
+         items support
     [1]  {20}  0.1589041
     [2]  {40}  0.1561644
     [3]  {34}  0.1547945
@@ -339,16 +339,16 @@ inspect(sort(rules, by = "support")[1:10])
     [8]  {4}   0.1438356
     [9]  {14}  0.1438356
     [10] {8}   0.1424658
-    
+
 
 ### 2 Set of Rules
 
 
 ```R
-inspect(sort(rules, by = "support")[43:50]) 
+inspect(sort(rules, by = "support")[43:50])
 ```
 
-        items   support   
+        items   support
     [1] {22}    0.11232877
     [2] {9}     0.09863014
     [3] {20,35} 0.02876712
@@ -357,7 +357,7 @@ inspect(sort(rules, by = "support")[43:50])
     [6] {8,39}  0.02876712
     [7] {33,40} 0.02876712
     [8] {27,40} 0.02876712
-    
+
 
 ### Find 3 Set of Rules
  - {19,25,28} 0.006849315 is Maximum support 3 Set
@@ -367,7 +367,7 @@ inspect(sort(rules, by = "support")[43:50])
 inspect(sort(rules[rules@quality$support >= 0.005 & rules@quality$support <= 0.00685], by = "support")[25:40])
 ```
 
-         items      support    
+         items      support
     [1]  {24,43}    0.006849315
     [2]  {31,39}    0.006849315
     [3]  {19,25,28} 0.006849315
@@ -384,14 +384,14 @@ inspect(sort(rules[rules@quality$support >= 0.005 & rules@quality$support <= 0.0
     [14] {6,18,31}  0.006849315
     [15] {11,29,44} 0.006849315
     [16] {27,29,40} 0.006849315
-    
+
 
 
 ```R
 df <- as.data.frame(inspect(sort(rules, by = "support")))
 ```
 
-           items      support    
+           items      support
     [1]    {20}       0.158904110
     [2]    {40}       0.156164384
     [3]    {34}       0.154794521
@@ -1633,7 +1633,7 @@ df <- as.data.frame(inspect(sort(rules, by = "support")))
     [1239] {8,17,27}  0.005479452
     [1240] {4,8,27}   0.005479452
     [1241] {8,27,40}  0.005479452
-    
+
 
 
 ```R
@@ -1647,7 +1647,7 @@ print(head(df[1000:10000,]))
     [1003] {20,35,40} 0.006849315
     [1004] {12,15,24} 0.006849315
     [1005]  {4,12,24} 0.006849315
-    
+
 
 
 ```R
@@ -1672,9 +1672,9 @@ print(head(df[1000:10000,]))
     [1003] 20,35,40 0.006849315
     [1004] 12,15,24 0.006849315
     [1005]  4,12,24 0.006849315
-    
 
-## 4개 이상의 조합을 얻기 위한 지지도 하향 조정 
+
+## 4개 이상의 조합을 얻기 위한 지지도 하향 조정
 
 
 ```R
@@ -1683,19 +1683,19 @@ summary(rules2)
 ```
 
     Apriori
-    
+
     Parameter specification:
      confidence minval smax arem  aval originalSupport maxtime support minlen
              NA    0.1    1 none FALSE            TRUE       5   5e-04      1
      maxlen            target   ext
          10 frequent itemsets FALSE
-    
+
     Algorithmic control:
      filter tree heap memopt load sort verbose
         0.1 TRUE TRUE  FALSE TRUE    2    TRUE
-    
-    Absolute minimum support count: 0 
-    
+
+    Absolute minimum support count: 0
+
     set item appearances ...[0 item(s)] done [0.00s].
     set transactions ...[44 item(s), 730 transaction(s)] done [0.00s].
     sorting and recoding items ... [44 item(s)] done [0.00s].
@@ -1703,33 +1703,33 @@ summary(rules2)
     checking subsets of size 1 2 3 4 5 6 done [0.01s].
     writing ... [23745 set(s)] done [0.03s].
     creating S4 object  ... done [0.01s].
-    
+
 
 
     set of 23745 itemsets
-    
+
     most frequent items:
-         40      20      27      34      37 (Other) 
-       2360    2358    2275    2269    2261   78058 
-    
+         40      20      27      34      37 (Other)
+       2360    2358    2275    2269    2261   78058
+
     element (itemset/transaction) length distribution:sizes
-       1    2    3    4    5    6 
-      44  946 8545 9675 3900  635 
-    
-       Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-      1.000   3.000   4.000   3.773   4.000   6.000 
-    
+       1    2    3    4    5    6
+      44  946 8545 9675 3900  635
+
+       Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1.000   3.000   4.000   3.773   4.000   6.000
+
     summary of quality measures:
-        support        
-     Min.   :0.001370  
-     1st Qu.:0.001370  
-     Median :0.001370  
-     Mean   :0.002478  
-     3rd Qu.:0.001370  
-     Max.   :0.158904  
-    
-    includes transaction ID lists: FALSE 
-    
+        support
+     Min.   :0.001370
+     1st Qu.:0.001370
+     Median :0.001370
+     Mean   :0.002478
+     3rd Qu.:0.001370
+     Max.   :0.158904
+
+    includes transaction ID lists: FALSE
+
     mining info:
             data ntransactions support confidence
      trans[, -2]           730   5e-04          1
@@ -1740,7 +1740,7 @@ summary(rules2)
 inspect(sort(rules2[rules2@quality$support >= 0.001 & rules2@quality$support <= 0.0015], by = "support")[4870:4880])
 ```
 
-         items        support    
+         items        support
     [1]  {1,20,34}    0.001369863
     [2]  {20,27,37}   0.001369863
     [3]  {20,34,37}   0.001369863
@@ -1752,19 +1752,19 @@ inspect(sort(rules2[rules2@quality$support >= 0.001 & rules2@quality$support <= 
     [9]  {6,9,22,30}  0.001369863
     [10] {9,22,24,30} 0.001369863
     [11] {9,11,22,30} 0.001369863
-    
 
-# 로또 선택 전략 
+
+# 로또 선택 전략
 
 ### 여러가지 번호를 선택하는 방향이 있을거라고 판단 된다.
     **지지도 => 그 숫자 또는 숫자의 집합이 나올 확률 **
-    
- 1. 개별의 숫자 6개 ( 지지도 상위 6개 ) 선택 
- 2. 1 1 1 3 / 1 1 3 1 / 1 3 1 1 / 3 1 1 1 
- 3. 1 1 2 2 / 1 2 1 2 / 1 2 2 1 / 2 1 2 1 / 2 1 1 2 / 2 2 1 1 과 같은 순으로 선택 
+
+ 1. 개별의 숫자 6개 ( 지지도 상위 6개 ) 선택
+ 2. 1 1 1 3 / 1 1 3 1 / 1 3 1 1 / 3 1 1 1
+ 3. 1 1 2 2 / 1 2 1 2 / 1 2 2 1 / 2 1 2 1 / 2 1 1 2 / 2 2 1 1 과 같은 순으로 선택
 
 ### 1. 개별 지지도 상위 6개 선택
- - 20,40,34,27,1,37 
+ - 20,40,34,27,1,37
   - 확률 0.00001290....
 
 
@@ -1787,17 +1787,17 @@ print(prob)
     [1] "cusum :  8.72120429851455e-05"
     [1] "cusum :  1.29026036197202e-05"
     [1] 1.29026e-05
-    
 
-### 2. 개별 항목 3개, 3개 집합 1개 선택 
+
+### 2. 개별 항목 3개, 3개 집합 1개 선택
  - 최상위 개별 선택 3개 항목
   - {20}  0.1589041
   - {40}  0.1561644
   - {34}  0.1547945
- - 3개 항목 최상위 위의 숫자를 제외한 
+ - 3개 항목 최상위 위의 숫자를 제외한
   - {19,25,28} 0.006849315
  - 20,40,34,19,25,28
-  - 확률 : 0.0000263 
+  - 확률 : 0.0000263
 
 ### 3. 3개의 집단 2개 선택
  - {19,25,28} 0.006849315
@@ -1809,8 +1809,8 @@ print(prob)
  - {20,35} 0.02876712
  - 확률 : 0.000042
 
-# 결론 
+# 결론
  - 개별 항목이 나올 확률은 비슷하게 나온다. => 즉, 특정 숫자가 많이 나오지는 않는다.
  - 개별 항목이 확률이 높게 나타나더라도 조합의 갯수가 많은 숫자를 선택하는 것이 당첨될 확률이 높다.
-  - 현재까지 나온 숫자로 본 결과 3,3개의 조합이 가장 크게 나왔다. 
+  - 현재까지 나온 숫자로 본 결과 3,3개의 조합이 가장 크게 나왔다.
  - 하지만 최종 결론은 수치와 데이터를 믿고 로또를 하는 일은 수치를 다루는 사람이 아니라고 생각되며, 운과 행운을 빌어 재미삼아 하길 기원한다.
