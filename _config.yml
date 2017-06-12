@@ -31,8 +31,8 @@ paginate_path: /page:num/
 
 # Tracker
 google_analytics_id: UA-100783503-1
-#google_analytics:
-#  ua: UA-100783503-1
+google_analytics:
+  ua: UA-100783503-1
 
 # Comments
 #disqus-shortname: webjeda-demo
