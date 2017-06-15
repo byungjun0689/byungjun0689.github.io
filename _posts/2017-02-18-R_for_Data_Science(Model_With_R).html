@@ -8456,15 +8456,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11214,7 +11214,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11649,7 +11649,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11705,14 +11705,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -12535,7 +12535,7 @@ BMEOAABAEAQ7AAAAQRDsAAAABPEX0Q/inu1g/KwAAAAASUVORK5CYII="
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>month_levels <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span>
-  <span class="s">&quot;Jan&quot;</span><span class="p">,</span> <span class="s">&quot;Feb&quot;</span><span class="p">,</span> <span class="s">&quot;Mar&quot;</span><span class="p">,</span> <span class="s">&quot;Apr&quot;</span><span class="p">,</span> <span class="s">&quot;May&quot;</span><span class="p">,</span> <span class="s">&quot;Jun&quot;</span><span class="p">,</span> 
+  <span class="s">&quot;Jan&quot;</span><span class="p">,</span> <span class="s">&quot;Feb&quot;</span><span class="p">,</span> <span class="s">&quot;Mar&quot;</span><span class="p">,</span> <span class="s">&quot;Apr&quot;</span><span class="p">,</span> <span class="s">&quot;May&quot;</span><span class="p">,</span> <span class="s">&quot;Jun&quot;</span><span class="p">,</span>
   <span class="s">&quot;Jul&quot;</span><span class="p">,</span> <span class="s">&quot;Aug&quot;</span><span class="p">,</span> <span class="s">&quot;Sep&quot;</span><span class="p">,</span> <span class="s">&quot;Oct&quot;</span><span class="p">,</span> <span class="s">&quot;Nov&quot;</span><span class="p">,</span> <span class="s">&quot;Dec&quot;</span>
 <span class="p">)</span>
 
@@ -12618,7 +12618,7 @@ y1 <span class="o">&lt;-</span> <span class="kp">factor</span><span class="p">(<
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>flights <span class="o">%&gt;%</span> select<span class="p">(</span>year<span class="p">,</span>month<span class="p">,</span>day<span class="p">,</span>hour<span class="p">,</span> minute<span class="p">)</span> <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>flights <span class="o">%&gt;%</span> select<span class="p">(</span>year<span class="p">,</span>month<span class="p">,</span>day<span class="p">,</span>hour<span class="p">,</span> minute<span class="p">)</span> <span class="o">%&gt;%</span>
   mutate<span class="p">(</span>departure <span class="o">=</span> make_datetime<span class="p">(</span>year<span class="p">,</span>month<span class="p">,</span>day<span class="p">,</span>hour<span class="p">,</span>minute<span class="p">))</span> <span class="o">%&gt;%</span> <span class="kp">head</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
 </pre></div>
 
@@ -12666,14 +12666,14 @@ y1 <span class="o">&lt;-</span> <span class="kp">factor</span><span class="p">(<
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">&lt;-</span> flights <span class="o">%&gt;%</span> 
-  filter<span class="p">(</span><span class="o">!</span><span class="kp">is.na</span><span class="p">(</span>dep_time<span class="p">),</span> <span class="o">!</span><span class="kp">is.na</span><span class="p">(</span>arr_time<span class="p">))</span> <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">&lt;-</span> flights <span class="o">%&gt;%</span>
+  filter<span class="p">(</span><span class="o">!</span><span class="kp">is.na</span><span class="p">(</span>dep_time<span class="p">),</span> <span class="o">!</span><span class="kp">is.na</span><span class="p">(</span>arr_time<span class="p">))</span> <span class="o">%&gt;%</span>
   mutate<span class="p">(</span>
     dep_time <span class="o">=</span> make_datetime_100<span class="p">(</span>year<span class="p">,</span> month<span class="p">,</span> day<span class="p">,</span> dep_time<span class="p">),</span>
     arr_time <span class="o">=</span> make_datetime_100<span class="p">(</span>year<span class="p">,</span> month<span class="p">,</span> day<span class="p">,</span> arr_time<span class="p">),</span>
     sched_dep_time <span class="o">=</span> make_datetime_100<span class="p">(</span>year<span class="p">,</span> month<span class="p">,</span> day<span class="p">,</span> sched_dep_time<span class="p">),</span>
     sched_arr_time <span class="o">=</span> make_datetime_100<span class="p">(</span>year<span class="p">,</span> month<span class="p">,</span> day<span class="p">,</span> sched_arr_time<span class="p">)</span>
-  <span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="p">)</span> <span class="o">%&gt;%</span>
   select<span class="p">(</span>origin<span class="p">,</span> dest<span class="p">,</span> ends_with<span class="p">(</span><span class="s">&quot;delay&quot;</span><span class="p">),</span> ends_with<span class="p">(</span><span class="s">&quot;time&quot;</span><span class="p">))</span>
 </pre></div>
 
@@ -12729,8 +12729,8 @@ y1 <span class="o">&lt;-</span> <span class="kp">factor</span><span class="p">(<
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span> 
-  ggplot<span class="p">(</span>aes<span class="p">(</span>dep_time<span class="p">))</span> <span class="o">+</span> 
+<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span>
+  ggplot<span class="p">(</span>aes<span class="p">(</span>dep_time<span class="p">))</span> <span class="o">+</span>
   geom_freqpoly<span class="p">(</span>binwidth <span class="o">=</span> <span class="m">86400</span><span class="p">)</span> <span class="c1"># 86400 seconds = 1 day</span>
 </pre></div>
 
@@ -13503,8 +13503,8 @@ AjsAAABDENgBAAAYgsAOAADAEAR2AAAAhiCwAwAAMMT/AfV/OO+5Ba3WAAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span> 
-  ggplot<span class="p">(</span>aes<span class="p">(</span>dep_time<span class="p">))</span> <span class="o">+</span> 
+<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span>
+  ggplot<span class="p">(</span>aes<span class="p">(</span>dep_time<span class="p">))</span> <span class="o">+</span>
   geom_histogram<span class="p">(</span>binwidth <span class="o">=</span> <span class="m">86400</span><span class="p">)</span> <span class="c1"># 86400 seconds = 1 day 보기 어렵다. 너무 백빽함.</span>
 </pre></div>
 
@@ -13708,9 +13708,9 @@ YAcAAKAIgh0AAIAi/g9j0BHZliTFzAAAAABJRU5ErkJggg=="
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span>
   filter<span class="p">(</span>dep_time <span class="o">&lt;</span> ymd<span class="p">(</span><span class="m">20130102</span><span class="p">))</span> <span class="o">%&gt;%</span>  <span class="c1"># filter 날짜.</span>
-  ggplot<span class="p">(</span>aes<span class="p">(</span>dep_time<span class="p">))</span> <span class="o">+</span> 
+  ggplot<span class="p">(</span>aes<span class="p">(</span>dep_time<span class="p">))</span> <span class="o">+</span>
   geom_freqpoly<span class="p">(</span>binwidth <span class="o">=</span> <span class="m">600</span><span class="p">)</span> <span class="c1"># 600 s = 10 minutes</span>
 </pre></div>
 
@@ -14609,7 +14609,7 @@ Sunday
 <div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span>
   mutate<span class="p">(</span>wday <span class="o">=</span> wday<span class="p">(</span>dep_time<span class="p">,</span> label <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>  <span class="c1"># 요일별 Count</span>
   ggplot<span class="p">(</span>aes<span class="p">(</span>x <span class="o">=</span> wday<span class="p">))</span> <span class="o">+</span>
   geom_bar<span class="p">()</span>
@@ -14810,10 +14810,10 @@ HQAAgCYodgAAAJqg2AEAAGji/wBMCzt5GbZcTgAAAABJRU5ErkJggg=="
 <div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span> 
-  mutate<span class="p">(</span>minute <span class="o">=</span> minute<span class="p">(</span>dep_time<span class="p">))</span> <span class="o">%&gt;%</span> 
-  group_by<span class="p">(</span>minute<span class="p">)</span> <span class="o">%&gt;%</span> 
-  summarise<span class="p">(</span> avg_delay <span class="o">=</span> <span class="kp">mean</span><span class="p">(</span>arr_delay<span class="p">,</span> na.rm <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span>n <span class="o">=</span> n<span class="p">())</span>  <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span>
+  mutate<span class="p">(</span>minute <span class="o">=</span> minute<span class="p">(</span>dep_time<span class="p">))</span> <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>minute<span class="p">)</span> <span class="o">%&gt;%</span>
+  summarise<span class="p">(</span> avg_delay <span class="o">=</span> <span class="kp">mean</span><span class="p">(</span>arr_delay<span class="p">,</span> na.rm <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span>n <span class="o">=</span> n<span class="p">())</span>  <span class="o">%&gt;%</span>
   ggplot<span class="p">(</span>aes<span class="p">(</span>minute<span class="p">,</span> avg_delay<span class="p">))</span> <span class="o">+</span> geom_line<span class="p">()</span>
 </pre></div>
 
@@ -15339,8 +15339,8 @@ ABgEwQ4AAMAgCHYAAAAGQbADAAAwCIIdAACAQRDsAAAADIJgBwAAYBAEOwAAAIMg2AEAABjE
 <div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span> 
-  count<span class="p">(</span>week <span class="o">=</span> floor_date<span class="p">(</span>dep_time<span class="p">,</span> <span class="s">&quot;week&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>flights_dt <span class="o">%&gt;%</span>
+  count<span class="p">(</span>week <span class="o">=</span> floor_date<span class="p">(</span>dep_time<span class="p">,</span> <span class="s">&quot;week&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
   ggplot<span class="p">(</span>aes<span class="p">(</span>week<span class="p">,</span> n<span class="p">))</span> <span class="o">+</span>
   geom_line<span class="p">()</span>
 </pre></div>
@@ -16179,7 +16179,7 @@ SUVORK5CYII="
 <div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>sim1<span class="p">,</span> aes<span class="p">(</span>x<span class="p">,</span>y<span class="p">))</span> <span class="o">+</span> 
+<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>sim1<span class="p">,</span> aes<span class="p">(</span>x<span class="p">,</span>y<span class="p">))</span> <span class="o">+</span>
   geom_abline<span class="p">(</span>aes<span class="p">(</span>intercept<span class="o">=</span>a1<span class="p">,</span> slope<span class="o">=</span>a2<span class="p">),</span>data<span class="o">=</span>models<span class="p">,</span> alpha <span class="o">=</span><span class="m">.25</span><span class="p">)</span> <span class="o">+</span>  <span class="c1"># abline은 절편과 기울기를 주면 해당 그림을 그린다. </span>
   geom_point<span class="p">()</span>
 </pre></div>
@@ -20013,7 +20013,7 @@ gg=="
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="&#54924;&#44480;&#49885;">&#54924;&#44480;&#49885;<a class="anchor-link" href="#&#54924;&#44480;&#49885;">&#182;</a></h1><ul>
 <li>SSE = sum of square error    1/n * sse = MSE (mean of Square Erros) =&gt; var (분산)
-<img src="3.PNG" width = 700></li>
+<img src="/src/0216/RD/3.PNG" width = 700></li>
 </ul>
 
 </div>
@@ -20290,7 +20290,7 @@ gg=="
 <div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>models <span class="o">&lt;-</span> models <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>models <span class="o">&lt;-</span> models <span class="o">%&gt;%</span>
   mutate<span class="p">(</span>dist <span class="o">=</span> purrr<span class="o">::</span>map2_dbl<span class="p">(</span>a1<span class="p">,</span> a2<span class="p">,</span> sim1_dist<span class="p">))</span>
 </pre></div>
 
@@ -20343,8 +20343,8 @@ gg=="
 <div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>sim1<span class="p">,</span> aes<span class="p">(</span>x<span class="p">,</span> y<span class="p">))</span> <span class="o">+</span> 
-  geom_point<span class="p">(</span>size <span class="o">=</span> <span class="m">2</span><span class="p">,</span> colour <span class="o">=</span> <span class="s">&quot;grey30&quot;</span><span class="p">)</span> <span class="o">+</span> 
+<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>sim1<span class="p">,</span> aes<span class="p">(</span>x<span class="p">,</span> y<span class="p">))</span> <span class="o">+</span>
+  geom_point<span class="p">(</span>size <span class="o">=</span> <span class="m">2</span><span class="p">,</span> colour <span class="o">=</span> <span class="s">&quot;grey30&quot;</span><span class="p">)</span> <span class="o">+</span>
   geom_abline<span class="p">(</span>
     aes<span class="p">(</span>intercept <span class="o">=</span> a1<span class="p">,</span> slope <span class="o">=</span> a2<span class="p">,</span> colour <span class="o">=</span> <span class="o">-</span>dist<span class="p">),</span> <span class="c1"># 거리가 가까울수록 연한 그래프 </span>
     data <span class="o">=</span> filter<span class="p">(</span>models<span class="p">,</span> <span class="kp">rank</span><span class="p">(</span>dist<span class="p">)</span> <span class="o">&lt;=</span> <span class="m">10</span><span class="p">)</span>
@@ -21584,10 +21584,10 @@ ganP18QHAAAAAElFTkSuQmCC"
 <div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>sim1<span class="p">,</span> aes<span class="p">(</span>x<span class="p">,</span> y<span class="p">))</span> <span class="o">+</span> 
-  geom_point<span class="p">(</span>size <span class="o">=</span> <span class="m">2</span><span class="p">,</span> colour <span class="o">=</span> <span class="s">&quot;grey30&quot;</span><span class="p">)</span> <span class="o">+</span> 
+<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>sim1<span class="p">,</span> aes<span class="p">(</span>x<span class="p">,</span> y<span class="p">))</span> <span class="o">+</span>
+  geom_point<span class="p">(</span>size <span class="o">=</span> <span class="m">2</span><span class="p">,</span> colour <span class="o">=</span> <span class="s">&quot;grey30&quot;</span><span class="p">)</span> <span class="o">+</span>
   geom_abline<span class="p">(</span>
-    aes<span class="p">(</span>intercept <span class="o">=</span> a1<span class="p">,</span> slope <span class="o">=</span> a2<span class="p">,</span> colour <span class="o">=</span> <span class="o">-</span>dist<span class="p">),</span> 
+    aes<span class="p">(</span>intercept <span class="o">=</span> a1<span class="p">,</span> slope <span class="o">=</span> a2<span class="p">,</span> colour <span class="o">=</span> <span class="o">-</span>dist<span class="p">),</span>
     data <span class="o">=</span> models <span class="o">%&gt;%</span> arrange<span class="p">(</span>dist<span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
   <span class="p">)</span>
 </pre></div>
@@ -22817,7 +22817,7 @@ gg=="
 <div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>models<span class="p">)</span> <span class="o">+</span> 
+<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>models<span class="p">)</span> <span class="o">+</span>
   geom_point<span class="p">(</span>aes<span class="p">(</span>a1<span class="p">,</span>a2<span class="p">,</span> color <span class="o">=</span> <span class="o">-</span>dist<span class="p">))</span> <span class="c1"># 색이 연할 수록 거리가 가깝다. 즉, 그래프가 그쪽으로 간다.</span>
 </pre></div>
 
@@ -23957,8 +23957,8 @@ best<span class="o">$</span>par
 <div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>sim1<span class="p">,</span> aes<span class="p">(</span>x<span class="p">,</span> y<span class="p">))</span> <span class="o">+</span> 
-  geom_point<span class="p">(</span>size <span class="o">=</span> <span class="m">2</span><span class="p">,</span> colour <span class="o">=</span> <span class="s">&quot;grey30&quot;</span><span class="p">)</span> <span class="o">+</span> 
+<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>sim1<span class="p">,</span> aes<span class="p">(</span>x<span class="p">,</span> y<span class="p">))</span> <span class="o">+</span>
+  geom_point<span class="p">(</span>size <span class="o">=</span> <span class="m">2</span><span class="p">,</span> colour <span class="o">=</span> <span class="s">&quot;grey30&quot;</span><span class="p">)</span> <span class="o">+</span>
   geom_abline<span class="p">(</span>intercept <span class="o">=</span> best<span class="o">$</span>par<span class="p">[</span><span class="m">1</span><span class="p">],</span> slope <span class="o">=</span> best<span class="o">$</span>par<span class="p">[</span><span class="m">2</span><span class="p">])</span> <span class="c1"># 기울기가 best$par[2]   절편 : best$par[1]</span>
 </pre></div>
 
@@ -24378,8 +24378,8 @@ Call:
 lm(formula = y ~ x, data = sim1)
 
 Coefficients:
-(Intercept)            x  
-      4.221        2.052  
+(Intercept)            x
+      4.221        2.052
 </pre>
 </div>
 
@@ -24471,18 +24471,18 @@ Call:
 lm(formula = price ~ carat, data = diamonds)
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--18585.3   -804.8    -18.9    537.4  12731.7 
+     Min       1Q   Median       3Q      Max
+-18585.3   -804.8    -18.9    537.4  12731.7
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
+            Estimate Std. Error t value Pr(&gt;|t|)
 (Intercept) -2256.36      13.06  -172.8   &lt;2e-16 ***
 carat        7756.43      14.07   551.4   &lt;2e-16 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 1549 on 53938 degrees of freedom
-Multiple R-squared:  0.8493,	Adjusted R-squared:  0.8493 
+Multiple R-squared:  0.8493,	Adjusted R-squared:  0.8493
 F-statistic: 3.041e+05 on 1 and 53938 DF,  p-value: &lt; 2.2e-16
 </pre>
 </div>
@@ -24544,17 +24544,17 @@ Call:
 lm(formula = price ~ 0 + carat, data = diamonds)
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--10486.8  -1473.9  -1136.2   -674.9  12649.1 
+     Min       1Q   Median       3Q      Max
+-10486.8  -1473.9  -1136.2   -674.9  12649.1
 
 Coefficients:
-      Estimate Std. Error t value Pr(&gt;|t|)    
+      Estimate Std. Error t value Pr(&gt;|t|)
 carat 5666.270      8.955   632.8   &lt;2e-16 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 1930 on 53939 degrees of freedom
-Multiple R-squared:  0.8813,	Adjusted R-squared:  0.8813 
+Multiple R-squared:  0.8813,	Adjusted R-squared:  0.8813
 F-statistic: 4.004e+05 on 1 and 53939 DF,  p-value: &lt; 2.2e-16
 </pre>
 </div>
@@ -24590,11 +24590,11 @@ Call:
 lm(formula = price ~ carat + z, data = diamonds)
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--21323.9   -704.8    -12.8    423.4  31214.8 
+     Min       1Q   Median       3Q      Max
+-21323.9   -704.8    -12.8    423.4  31214.8
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
+            Estimate Std. Error t value Pr(&gt;|t|)
 (Intercept)   340.66      75.62   4.505 6.65e-06 ***
 carat        9288.40      46.10 201.480  &lt; 2e-16 ***
 z           -1079.32      30.97 -34.856  &lt; 2e-16 ***
@@ -24602,7 +24602,7 @@ z           -1079.32      30.97 -34.856  &lt; 2e-16 ***
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 1531 on 53937 degrees of freedom
-Multiple R-squared:  0.8526,	Adjusted R-squared:  0.8526 
+Multiple R-squared:  0.8526,	Adjusted R-squared:  0.8526
 F-statistic: 1.561e+05 on 2 and 53937 DF,  p-value: &lt; 2.2e-16
 </pre>
 </div>
@@ -25889,18 +25889,18 @@ Call:
 lm(formula = price ~ carat^2, data = diamonds)
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--18585.3   -804.8    -18.9    537.4  12731.7 
+     Min       1Q   Median       3Q      Max
+-18585.3   -804.8    -18.9    537.4  12731.7
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
+            Estimate Std. Error t value Pr(&gt;|t|)
 (Intercept) -2256.36      13.06  -172.8   &lt;2e-16 ***
 carat        7756.43      14.07   551.4   &lt;2e-16 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 1549 on 53938 degrees of freedom
-Multiple R-squared:  0.8493,	Adjusted R-squared:  0.8493 
+Multiple R-squared:  0.8493,	Adjusted R-squared:  0.8493
 F-statistic: 3.041e+05 on 1 and 53938 DF,  p-value: &lt; 2.2e-16
 </pre>
 </div>
@@ -25948,12 +25948,12 @@ Call:
 lm(formula = price ~ I(carat^2) + carat + z, data = diamonds)
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--22762.2   -697.5    -16.8    412.7  28330.5 
+     Min       1Q   Median       3Q      Max
+-22762.2   -697.5    -16.8    412.7  28330.5
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)   191.12      83.38   2.292   0.0219 *  
+            Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept)   191.12      83.38   2.292   0.0219 *
 I(carat^2)    110.78      26.04   4.253 2.11e-05 ***
 carat        8910.25     100.14  88.975  &lt; 2e-16 ***
 z            -978.76      38.96 -25.125  &lt; 2e-16 ***
@@ -25961,7 +25961,7 @@ z            -978.76      38.96 -25.125  &lt; 2e-16 ***
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 1531 on 53936 degrees of freedom
-Multiple R-squared:  0.8527,	Adjusted R-squared:  0.8527 
+Multiple R-squared:  0.8527,	Adjusted R-squared:  0.8527
 F-statistic: 1.041e+05 on 3 and 53936 DF,  p-value: &lt; 2.2e-16
 </pre>
 </div>
@@ -25981,7 +25981,7 @@ F-statistic: 1.041e+05 on 3 and 53936 DF,  p-value: &lt; 2.2e-16
 <li>Carat^2 가 안되는 이유 </li>
 <li>lm에서 곱하기는 상호작용을 의미한다. carat^2 = carat * carat, 두개의 변수의 곱이 미치는 영향을 의미한다.</li>
 <li>곱을 표현하고 싶다면 변수:변수 로 표현한다. </li>
-<li>상호작용 항이라고 한다. <strong>a,b</strong>의 상호작으로 보게 되면 a,b도 같이 들어간다, <strong>a + b + a:b </strong> 이런식으로 
+<li>상호작용 항이라고 한다. <strong>a,b</strong>의 상호작으로 보게 되면 a,b도 같이 들어간다, <strong>a + b + a:b </strong> 이런식으로
 #### a + b + a:b =&gt; a*b가 된다. </li>
 </ul>
 
@@ -26013,11 +26013,11 @@ Call:
 lm(formula = price ~ carat + z + carat:z, data = diamonds)
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--25518.5   -649.9    -26.6    357.8  21350.5 
+     Min       1Q   Median       3Q      Max
+-25518.5   -649.9    -26.6    357.8  21350.5
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
+            Estimate Std. Error t value Pr(&gt;|t|)
 (Intercept)   550.26      75.94   7.246 4.34e-13 ***
 carat        6728.23     128.34  52.427  &lt; 2e-16 ***
 z            -968.56      31.27 -30.976  &lt; 2e-16 ***
@@ -26026,7 +26026,7 @@ carat:z       458.64      21.47  21.362  &lt; 2e-16 ***
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 1525 on 53936 degrees of freedom
-Multiple R-squared:  0.8539,	Adjusted R-squared:  0.8539 
+Multiple R-squared:  0.8539,	Adjusted R-squared:  0.8539
 F-statistic: 1.051e+05 on 3 and 53936 DF,  p-value: &lt; 2.2e-16
 </pre>
 </div>
@@ -26062,11 +26062,11 @@ Call:
 lm(formula = price ~ carat * z, data = diamonds)
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--25518.5   -649.9    -26.6    357.8  21350.5 
+     Min       1Q   Median       3Q      Max
+-25518.5   -649.9    -26.6    357.8  21350.5
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
+            Estimate Std. Error t value Pr(&gt;|t|)
 (Intercept)   550.26      75.94   7.246 4.34e-13 ***
 carat        6728.23     128.34  52.427  &lt; 2e-16 ***
 z            -968.56      31.27 -30.976  &lt; 2e-16 ***
@@ -26075,7 +26075,7 @@ carat:z       458.64      21.47  21.362  &lt; 2e-16 ***
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 1525 on 53936 degrees of freedom
-Multiple R-squared:  0.8539,	Adjusted R-squared:  0.8539 
+Multiple R-squared:  0.8539,	Adjusted R-squared:  0.8539
 F-statistic: 1.051e+05 on 3 and 53936 DF,  p-value: &lt; 2.2e-16
 </pre>
 </div>
