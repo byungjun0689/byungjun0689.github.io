@@ -15,7 +15,7 @@ main-class: 'elastic search'
 
 - Apache web server -> Logstash -> Elasticsearch -> kibana
 
-  ![Data Flow](./dataflow.png)
+  ![Data Flow](/src/201708/ELK/dataflow.png)
 
 
 
@@ -40,7 +40,7 @@ main-class: 'elastic search'
 - BI 툴
 - Elasticsearch 위에서 ES에 저장된 데이터를 사용자에게 Dashboard 또는 다양한 시각화를 통해 전달해주는 솔루션.
 
-![realflow](./realflow.png)
+![realflow](/src/201708/ELK/realflow.png)
 
 
 
@@ -81,18 +81,18 @@ main-class: 'elastic search'
 
   - VirtualMachine - Network 설정 
 
-    ![nat](./virtual-nat.png)
+    ![nat](/src/201708/ELK/virtual-nat.png)
 
-    ![nat](./virtual-nat-portforwarding.png)
+    ![nat](/src/201708/ELK/virtual-nat-portforwarding.png)
 
-    ![nat](./virtual-host-only.png)
+    ![nat](/src/201708/ELK/virtual-host-only.png)
 
 - 처음 로그인해서 보면 NAT 밖에 없는 경우가 있을 것이다. 그럴 경우 NETWORK 를 하나 더 생성 해줘야하는데 /etc/network/interface에 저는 Wifi를 이용해서 그런지 enp0s8 이 잡혀서 이걸 새로 dhcd 형태로 추가 하면 Host-only-network 용 카드가 잡히게 됩니다.
 
-  ![nat](./virtual-first-ifconfig.png)
+  ![nat](/src/201708/ELK/virtual-first-ifconfig.png)
 
 - sudo nano /etc/network/interface => sudo /etc/init.d/networking restart 수행 
-  ![afterconfig](virtual-after-ifconfig.png)
+  ![afterconfig](/src/201708/ELK/virtual-after-ifconfig.png)
 
   ​
 
@@ -233,11 +233,11 @@ main-class: 'elastic search'
 
   - 아래 와 같이 Create 버튼이 활성화가 된다면 로그가 입력이 된 것이다.
 
-  ![kibana](kibana_check.png)
+  ![kibana](/src/201708/ELK/kibana_check.png)
 
   - 생성 후 웹서버의 Index 페이지를 리플레쉬 또는 재접속을 하는 방식으로 데이터 입력을 확인 할 수 있다. 
   - Row 데이터는 Discover 부분에서 확인가능하다.
-    ![kibana2](kibana_check2.png)
+    ![kibana2](/src/201708/ELK/kibana_check2.png)
 
 
 
