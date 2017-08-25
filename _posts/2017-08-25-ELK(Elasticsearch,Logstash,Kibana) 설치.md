@@ -2,7 +2,7 @@
 layout: post
 title: "ELK STACK Setup"
 date: 2017-08-25 23:30:26
-img: elasticsearch.jpg
+img: elasticsearch.png
 description: 'ELK STACK'
 main-class: 'elastic search'
 ---
