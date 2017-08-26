@@ -26,7 +26,7 @@ main-class: 'Python'
 
   - 반복한다.
 
-    ```Python
+    ```python
     def look_for_key(main_box):
         pile = main_box.make_a_pile_to_look_through()
         while pile in not empty:
