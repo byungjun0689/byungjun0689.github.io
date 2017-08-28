@@ -201,6 +201,7 @@ main-class: 'elastic search'
       - 안된다면 외부 접근이 금지 된 것인데 config/elasticsearch.yml 파일 내 network.host를 0.0.0.0 으로 변경
    8. 수행이 되지 않을 경우 log폴더의 elasticsearch.log 를 확인한 후 vm.max_map_count 와 같은 에러가 발생한다면
       - sudo sysctl -w vm.max_map_count=262144 를 수행.
+      - nano /etc/sysctl.conf  에 vm.max_map_count=262144 추가
 2. Kibana-5.1.2 설치
    1. tar -xf kibana-5.1.2-linux-x86_64.tar.gz
    2. mv kibana-5.1.2-linux-x86_64/ kibana
