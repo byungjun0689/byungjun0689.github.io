@@ -8456,15 +8456,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11214,7 +11214,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11649,7 +11649,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11705,14 +11705,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11751,7 +11751,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="QVC-Analysis">QVC Analysis<a class="anchor-link" href="#QVC-Analysis">&#182;</a></h1><ul>
+<h1 id="QVC-Analysis">QVC Analysis (E-Commerce 판매 데이터 분석)<a class="anchor-link" href="#QVC-Analysis">&#182;</a></h1><ul>
 <li>전처리 과정은 Jupyter 메모리상 중간에 되지를 않게 되어 .R 내용을 확인 </li>
 <li><a href="https://github.com/byungjun0689/DataScience/blob/master/1.%20Portfolio/2.%20QVC/1.%20HandlingData.R"> Data_Handling </a></li>
 <li><a href="https://github.com/byungjun0689/DataScience/blob/master/1.%20Portfolio/2.%20QVC/2.%20making_order.R"> Making OrderData </a></li>
@@ -16459,10 +16459,10 @@ gg <span class="o">&lt;-</span> gg <span class="o">+</span> geom_map<span class=
 gg <span class="o">&lt;-</span> gg <span class="o">+</span> geom_map<span class="p">(</span>data<span class="o">=</span>city<span class="p">,</span> map<span class="o">=</span>us<span class="p">,</span>
                     aes<span class="p">(</span>fill<span class="o">=</span>cnt<span class="p">,</span> map_id<span class="o">=</span>city<span class="p">),</span>
                     color<span class="o">=</span><span class="s">&quot;#ffffff&quot;</span><span class="p">,</span> size<span class="o">=</span><span class="m">0.25</span><span class="p">)</span>
-gg <span class="o">&lt;-</span> gg <span class="o">+</span> scale_fill_continuous<span class="p">(</span>low<span class="o">=</span><span class="s">&#39;thistle2&#39;</span><span class="p">,</span> high<span class="o">=</span><span class="s">&#39;darkred&#39;</span><span class="p">,</span> 
+gg <span class="o">&lt;-</span> gg <span class="o">+</span> scale_fill_continuous<span class="p">(</span>low<span class="o">=</span><span class="s">&#39;thistle2&#39;</span><span class="p">,</span> high<span class="o">=</span><span class="s">&#39;darkred&#39;</span><span class="p">,</span>
                                  guide<span class="o">=</span><span class="s">&#39;colorbar&#39;</span><span class="p">)</span>
 gg <span class="o">&lt;-</span> gg <span class="o">+</span> labs<span class="p">(</span>x<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> y<span class="o">=</span><span class="kc">NULL</span><span class="p">)</span>
-gg <span class="o">&lt;-</span> gg <span class="o">+</span> coord_map<span class="p">(</span><span class="s">&quot;albers&quot;</span><span class="p">,</span> lat0 <span class="o">=</span> <span class="m">39</span><span class="p">,</span> lat1 <span class="o">=</span> <span class="m">45</span><span class="p">)</span> 
+gg <span class="o">&lt;-</span> gg <span class="o">+</span> coord_map<span class="p">(</span><span class="s">&quot;albers&quot;</span><span class="p">,</span> lat0 <span class="o">=</span> <span class="m">39</span><span class="p">,</span> lat1 <span class="o">=</span> <span class="m">45</span><span class="p">)</span>
 gg <span class="o">&lt;-</span> gg <span class="o">+</span> theme<span class="p">(</span>panel.border <span class="o">=</span> element_blank<span class="p">())</span>
 gg <span class="o">&lt;-</span> gg <span class="o">+</span> theme<span class="p">(</span>panel.background <span class="o">=</span> element_blank<span class="p">())</span>
 gg <span class="o">&lt;-</span> gg <span class="o">+</span> theme<span class="p">(</span>axis.ticks <span class="o">=</span> element_blank<span class="p">())</span>
@@ -17831,12 +17831,12 @@ segment_customer<span class="o">$</span>SHOPPER_SEGMENT_CODE<span class="p">[</s
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>bp<span class="o">&lt;-</span> ggplot<span class="p">(</span>segment_customer<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span> y<span class="o">=</span>cu_cnt<span class="p">,</span> fill<span class="o">=</span><span class="kp">as.factor</span><span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">)))</span><span class="o">+</span>
-  geom_bar<span class="p">(</span>width <span class="o">=</span> <span class="m">1</span><span class="p">,</span> stat <span class="o">=</span> <span class="s">&quot;identity&quot;</span><span class="p">)</span> 
+  geom_bar<span class="p">(</span>width <span class="o">=</span> <span class="m">1</span><span class="p">,</span> stat <span class="o">=</span> <span class="s">&quot;identity&quot;</span><span class="p">)</span>
 pie <span class="o">&lt;-</span> bp <span class="o">+</span> coord_polar<span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> start<span class="o">=</span><span class="m">0</span><span class="p">)</span>
 <span class="c1"># scale_fill_brewer(&quot;Blues&quot;) + blank_theme +</span>
-pie <span class="o">+</span> 
+pie <span class="o">+</span>
   <span class="c1">#theme(axis.text.x=element_blank())+</span>
-  geom_text<span class="p">(</span>aes<span class="p">(</span>y <span class="o">=</span> cu_cnt<span class="o">/</span><span class="m">3</span> <span class="o">+</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="kp">cumsum</span><span class="p">(</span>cu_cnt<span class="p">)[</span><span class="o">-</span><span class="kp">length</span><span class="p">(</span>cu_cnt<span class="p">)]),</span> 
+  geom_text<span class="p">(</span>aes<span class="p">(</span>y <span class="o">=</span> cu_cnt<span class="o">/</span><span class="m">3</span> <span class="o">+</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="kp">cumsum</span><span class="p">(</span>cu_cnt<span class="p">)[</span><span class="o">-</span><span class="kp">length</span><span class="p">(</span>cu_cnt<span class="p">)]),</span>
                 label <span class="o">=</span> <span class="kp">paste0</span><span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">,</span><span class="s">&quot;:&quot;</span><span class="p">,</span>prob<span class="p">,</span><span class="s">&quot;%&quot;</span><span class="p">)),</span> size<span class="o">=</span><span class="m">3</span><span class="p">)</span>
 </pre></div>
 
@@ -18380,7 +18380,7 @@ AAABQbADAAAICIIdAABAQBDsAAAAAoJgBwAAEBAEOwAAgIAg2AEAAAQEwQ4AACAgCHYAAAAB
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>segment_order <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span> group_by<span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">)</span> <span class="o">%&gt;%</span> summarize<span class="p">(</span>or_cnt<span class="o">=</span>n<span class="p">())</span>
-segment_order<span class="o">$</span>percent <span class="o">&lt;-</span> <span class="kp">round</span><span class="p">(</span><span class="kp">prop.table</span><span class="p">(</span>segment_order<span class="o">$</span>or_cnt<span class="p">),</span><span class="m">2</span><span class="p">)</span> 
+segment_order<span class="o">$</span>percent <span class="o">&lt;-</span> <span class="kp">round</span><span class="p">(</span><span class="kp">prop.table</span><span class="p">(</span>segment_order<span class="o">$</span>or_cnt<span class="p">),</span><span class="m">2</span><span class="p">)</span>
 
 ggplot<span class="p">(</span>segment_order<span class="p">,</span>aes<span class="p">(</span>x<span class="o">=</span>SHOPPER_SEGMENT_CODE<span class="p">,</span>y<span class="o">=</span>or_cnt<span class="p">,</span>fill<span class="o">=</span>SHOPPER_SEGMENT_CODE<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>stat<span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span>colour<span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">)</span>
 </pre></div>
@@ -25199,7 +25199,7 @@ order_df<span class="o">$</span>SHOPPER_SEGMENT_CODE <span class="o">&lt;-</span
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="id&#48324;&#47196;-&#52628;&#52380;-&#44032;&#51256;&#50724;&#45716;-Function">id&#48324;&#47196; &#52628;&#52380; &#44032;&#51256;&#50724;&#45716; Function<a class="anchor-link" href="#id&#48324;&#47196;-&#52628;&#52380;-&#44032;&#51256;&#50724;&#45716;-Function">&#182;</a></h3><h3 id="1.-Product-&#48324;">1. Product &#48324;<a class="anchor-link" href="#1.-Product-&#48324;">&#182;</a></h3><ul>
-<li>Product 의 경우 한번 구매한 제품에 대해서 재 구매 확률이 낮으므로 Cluster별로 구매 했던 내역에서 고객이 주문한 내역을 제외한 
+<li>Product 의 경우 한번 구매한 제품에 대해서 재 구매 확률이 낮으므로 Cluster별로 구매 했던 내역에서 고객이 주문한 내역을 제외한
 빈도가 가장 높은 순으로 추천 하여 구매를 예측 </li>
 </ul>
 
@@ -25219,7 +25219,7 @@ order_df<span class="o">$</span>SHOPPER_SEGMENT_CODE <span class="o">&lt;-</span
   in_product_list <span class="o">&lt;-</span> <span class="kp">as.data.frame</span><span class="p">(</span>in_product_list<span class="p">)</span>
   other_df <span class="o">&lt;-</span> in_df <span class="o">%&gt;%</span> filter<span class="p">(</span>CUSTOMER_NBR<span class="o">!=</span>custId<span class="p">)</span> <span class="o">%&gt;%</span> group_by<span class="p">(</span>PRODUCT_ID<span class="p">)</span> <span class="o">%&gt;%</span> summarize<span class="p">(</span>cnt <span class="o">=</span> <span class="kp">sum</span><span class="p">(</span>cnt<span class="p">))</span> <span class="o">%&gt;%</span> arrange<span class="p">(</span>desc<span class="p">(</span>cnt<span class="p">))</span>
   other_df <span class="o">&lt;-</span> <span class="kp">as.data.frame</span><span class="p">(</span>other_df<span class="p">)</span>
-  other_df<span class="o">$</span>percent <span class="o">&lt;-</span> <span class="kp">round</span><span class="p">(</span><span class="kp">prop.table</span><span class="p">(</span>other_df<span class="o">$</span>cnt<span class="p">),</span><span class="m">2</span><span class="p">)</span>  
+  other_df<span class="o">$</span>percent <span class="o">&lt;-</span> <span class="kp">round</span><span class="p">(</span><span class="kp">prop.table</span><span class="p">(</span>other_df<span class="o">$</span>cnt<span class="p">),</span><span class="m">2</span><span class="p">)</span>
   result_df <span class="o">&lt;-</span> other_df <span class="o">%&gt;%</span> filter<span class="p">(</span><span class="o">!</span><span class="p">(</span>PRODUCT_ID <span class="o">%in%</span> in_product_list<span class="o">$</span>in_producut_list<span class="p">))</span>
   result_df <span class="o">&lt;-</span> left_join<span class="p">(</span>result_df<span class="p">,</span>product<span class="p">)</span>
   <span class="kp">names</span><span class="p">(</span>in_product_list<span class="p">)[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&quot;PRODUCT_ID&quot;</span>
@@ -25273,8 +25273,8 @@ order_df<span class="o">$</span>SHOPPER_SEGMENT_CODE <span class="o">&lt;-</span
   baskets_df<span class="o">$</span>sequence <span class="o">&lt;-</span> <span class="kp">gsub</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;&lt;\\{\&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span>baskets_df<span class="o">$</span><span class="kp">sequence</span><span class="p">)</span>
   baskets_df<span class="o">$</span>sequence <span class="o">&lt;-</span> <span class="kp">gsub</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;\&quot;\\}&gt;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span>baskets_df<span class="o">$</span><span class="kp">sequence</span><span class="p">)</span>
   baskets_df<span class="o">$</span>sequence <span class="o">&lt;-</span> <span class="kp">gsub</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;\&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span>baskets_df<span class="o">$</span><span class="kp">sequence</span><span class="p">)</span>
-  last_df <span class="o">&lt;-</span> order_df<span class="p">[</span>order_df<span class="o">$</span>CUSTOMER_NBR<span class="o">==</span>custId<span class="p">,]</span> <span class="o">%&gt;%</span> 
-    arrange<span class="p">(</span>desc<span class="p">(</span>ORDER_DATES<span class="p">))</span> <span class="o">%&gt;%</span> 
+  last_df <span class="o">&lt;-</span> order_df<span class="p">[</span>order_df<span class="o">$</span>CUSTOMER_NBR<span class="o">==</span>custId<span class="p">,]</span> <span class="o">%&gt;%</span>
+    arrange<span class="p">(</span>desc<span class="p">(</span>ORDER_DATES<span class="p">))</span> <span class="o">%&gt;%</span>
     select<span class="p">(</span>MERCH_DIV_DESC<span class="p">)</span>
   last_cate <span class="o">&lt;-</span> last_df<span class="o">$</span>MERCH_DIV_DESC
   support_df <span class="o">&lt;-</span> baskets_df <span class="o">%&gt;%</span> filter<span class="p">(</span>str_detect<span class="p">(</span><span class="kp">sequence</span><span class="p">,</span>last_cate<span class="p">))</span>
@@ -25430,9 +25430,9 @@ Joining, by = &#34;PRODUCT_ID&#34;
 <div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>v3_1 <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span> 
-  group_by<span class="p">(</span>STATE<span class="p">,</span>PACKING_SLIP_DESC<span class="p">)</span> <span class="o">%&gt;%</span> 
-  summarize<span class="p">(</span>Pro_cnt<span class="o">=</span>n<span class="p">())</span> <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>v3_1 <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>STATE<span class="p">,</span>PACKING_SLIP_DESC<span class="p">)</span> <span class="o">%&gt;%</span>
+  summarize<span class="p">(</span>Pro_cnt<span class="o">=</span>n<span class="p">())</span> <span class="o">%&gt;%</span>
   slice<span class="p">(</span><span class="kp">which.max</span><span class="p">(</span>Pro_cnt<span class="p">))</span>
 </pre></div>
 
@@ -25647,9 +25647,9 @@ v3_4 <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span> group_b
 <div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>cs_prodcut <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span> 
-  group_by<span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">,</span>PACKING_SLIP_DESC<span class="p">)</span> <span class="o">%&gt;%</span> 
-  summarize<span class="p">(</span>pro_cnt<span class="o">=</span>n<span class="p">())</span> <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>cs_prodcut <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">,</span>PACKING_SLIP_DESC<span class="p">)</span> <span class="o">%&gt;%</span>
+  summarize<span class="p">(</span>pro_cnt<span class="o">=</span>n<span class="p">())</span> <span class="o">%&gt;%</span>
   slice<span class="p">(</span><span class="kp">which.max</span><span class="p">(</span>pro_cnt<span class="p">))</span>
 <span class="kp">head</span><span class="p">(</span>cs_prodcut<span class="p">)</span>
 </pre></div>
@@ -25690,9 +25690,9 @@ v3_4 <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span> group_b
 <div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>cs_category <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span> 
-  group_by<span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">,</span>MERCH_DIV_DESC<span class="p">)</span> <span class="o">%&gt;%</span> 
-  summarize<span class="p">(</span>cate_cnt<span class="o">=</span>n<span class="p">())</span> <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>cs_category <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">,</span>MERCH_DIV_DESC<span class="p">)</span> <span class="o">%&gt;%</span>
+  summarize<span class="p">(</span>cate_cnt<span class="o">=</span>n<span class="p">())</span> <span class="o">%&gt;%</span>
   slice<span class="p">(</span><span class="kp">which.max</span><span class="p">(</span>cate_cnt<span class="p">))</span>
 <span class="kp">head</span><span class="p">(</span>cs_category<span class="p">)</span>
 </pre></div>
@@ -25846,10 +25846,10 @@ tzsg_category<span class="o">$</span>SHOPPER_SEGMENT_CODE<span class="p">[</span
 <div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>product_per_hour <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span> 
-  group_by<span class="p">(</span>PACKING_SLIP_DESC<span class="p">,</span>ORDER_HOUR<span class="p">)</span> <span class="o">%&gt;%</span> 
-  summarize<span class="p">(</span>pro_cnt<span class="o">=</span>n<span class="p">())</span> <span class="o">%&gt;%</span> 
-  slice<span class="p">(</span><span class="kp">which.max</span><span class="p">(</span>pro_cnt<span class="p">))</span> <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span>product_per_hour <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>PACKING_SLIP_DESC<span class="p">,</span>ORDER_HOUR<span class="p">)</span> <span class="o">%&gt;%</span>
+  summarize<span class="p">(</span>pro_cnt<span class="o">=</span>n<span class="p">())</span> <span class="o">%&gt;%</span>
+  slice<span class="p">(</span><span class="kp">which.max</span><span class="p">(</span>pro_cnt<span class="p">))</span> <span class="o">%&gt;%</span>
   filter<span class="p">(</span>pro_cnt<span class="o">&gt;</span><span class="m">10</span><span class="p">)</span> <span class="o">%&gt;%</span> arrange<span class="p">(</span>ORDER_HOUR<span class="p">)</span>
 </pre></div>
 
@@ -25916,7 +25916,7 @@ tzsg_category<span class="o">$</span>SHOPPER_SEGMENT_CODE<span class="p">[</span
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>segment_brand <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span> group_by<span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">,</span>BRAND_NAME<span class="p">)</span> <span class="o">%&gt;%</span> summarize<span class="p">(</span>cnt <span class="o">=</span> n<span class="p">())</span> <span class="o">%&gt;%</span> arrange<span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">,</span>desc<span class="p">(</span>cnt<span class="p">))</span>
-segment_brand_max <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span> filter<span class="p">(</span>BRAND_NAME<span class="o">!=</span><span class="s">&quot;Not Known&quot;</span> <span class="o">&amp;</span> BRAND_NAME<span class="o">!=</span><span class="s">&quot;N/A&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> group_by<span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">,</span>BRAND_NAME<span class="p">)</span> <span class="o">%&gt;%</span> summarize<span class="p">(</span>cnt <span class="o">=</span> n<span class="p">())</span> <span class="o">%&gt;%</span> slice<span class="p">(</span><span class="kp">which.max</span><span class="p">(</span>cnt<span class="p">))</span> 
+segment_brand_max <span class="o">&lt;-</span> order_df <span class="o">%&gt;%</span> filter<span class="p">(</span>BRAND_NAME<span class="o">!=</span><span class="s">&quot;Not Known&quot;</span> <span class="o">&amp;</span> BRAND_NAME<span class="o">!=</span><span class="s">&quot;N/A&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> group_by<span class="p">(</span>SHOPPER_SEGMENT_CODE<span class="p">,</span>BRAND_NAME<span class="p">)</span> <span class="o">%&gt;%</span> summarize<span class="p">(</span>cnt <span class="o">=</span> n<span class="p">())</span> <span class="o">%&gt;%</span> slice<span class="p">(</span><span class="kp">which.max</span><span class="p">(</span>cnt<span class="p">))</span>
 segment_brand_max<span class="o">$</span>SHOPPER_SEGMENT_CODE<span class="p">[</span><span class="kp">is.na</span><span class="p">(</span>segment_brand_max<span class="o">$</span>SHOPPER_SEGMENT_CODE<span class="p">)]</span> <span class="o">&lt;-</span> <span class="m">0</span>
 </pre></div>
 
