@@ -5,6 +5,7 @@ date: 2017-08-25 23:30:26
 img: elasticsearch.png
 description: 'ELK STACK'
 main-class: 'elastic search'
+categories: elk
 ---
 
 # ELK 설치
@@ -30,7 +31,7 @@ main-class: 'elastic search'
 
 -------------
 
-- 로그 수집기 
+- 로그 수집기
 - Web apache server log file 또는 다양한 시스템의 LogFile을 수집하여 전송하는 수집기.
 
 ### Kibana
@@ -74,12 +75,12 @@ main-class: 'elastic search'
 
   - 네트워크
 
-    - 1번 : NAT 
+    - 1번 : NAT
     - 2번 : host-only-networks
 
-  - 1개 Machine 에 JAVA를 설치하고 복사를 하면 불편함을 덜 수 있습니다. 
+  - 1개 Machine 에 JAVA를 설치하고 복사를 하면 불편함을 덜 수 있습니다.
 
-  - VirtualMachine - Network 설정 
+  - VirtualMachine - Network 설정
 
     ![nat](/src/201708/ELK/virtual-nat.png)
 
@@ -91,19 +92,19 @@ main-class: 'elastic search'
 
   ![nat](/src/201708/ELK/virtual-first-ifconfig.png)
 
-- sudo nano /etc/network/interface => sudo /etc/init.d/networking restart 수행 
+- sudo nano /etc/network/interface => sudo /etc/init.d/networking restart 수행
   ![afterconfig](/src/201708/ELK/virtual-after-ifconfig.png)
 
   ​
 
-- JAVA 8 설치 
+- JAVA 8 설치
 
   - sudo add-apt-repository ppa:webupd8team/java
   - sudo apt-get update
   - sudo apt-get install oracle-java8-installer
   - ~.profile 추가 : JAVA_HOME이 잘못될 경우 Logstash 실행에 오류가 발생한다…(많은 시간 소요… JAVA_HOME...)
-    - export JAVA_HOME=/usr/lib/jvm/java-8-oracle 
-    - export PATH=$PATH:$JAVA_HOME/bin 
+    - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+    - export PATH=$PATH:$JAVA_HOME/bin
 
 - Mahcine 완전 복사.
 
@@ -119,42 +120,42 @@ main-class: 'elastic search'
 
    - sudo apt-get install apache2
 
-   - 각 파일별 위치 
+   - 각 파일별 위치
 
      - index.html (홈디렉토리) : /var/www/html
      - Access_log : /var/log/apache2 내 access_log
 
-   - Apache TZ이 Asia/Seoul이 아닐경우 
+   - Apache TZ이 Asia/Seoul이 아닐경우
 
-     - /etc/apache2/envvars 내 export TZ='Asia/Seoul' 추가 후 재시작 
+     - /etc/apache2/envvars 내 export TZ='Asia/Seoul' 추가 후 재시작
      - /etc/init.d/apache2 restart
 
-   - logfile 또는 Home directory를 변경하고 싶은 경우 
+   - logfile 또는 Home directory를 변경하고 싶은 경우
 
-     - logfile 위치 
+     - logfile 위치
        - sudo nano /etc/apache2/sites-enabled/000-default.conf 파일 내에서 log위치를 변경하면된다.
-     - Home_directory 위치 
+     - Home_directory 위치
        - sudo nano /etc/apache2/apache2.conf 파일 내 <Directory /var/www> 라는 부분을 해당 위치로 변경.
        - sudo nano /etc/apache2/sites-enabled/000-default.conf 파일 내 DocumentRoot /var/www/html 을 해당 위치로 변경.
-     - 재시작 
+     - 재시작
 
-   - Elasticsearch의 경우 JSON 형식으로 API를 사용하므로 log-format을 JSON으로 변경하여야 한다. 
+   - Elasticsearch의 경우 JSON 형식으로 API를 사용하므로 log-format을 JSON으로 변경하여야 한다.
 
      - Log-format 변경
 
        - sudo nano /etc/apache2/apache2.conf 내 log format이 있는 부분에 추가로 작성한다. 여러형태의 로그로 만들 수 있다.
        - LogFormat "{ \"time\":\"%t\", \"clientip\":\"%a\",\"host\":\"%V\", \"request\":\"%U\", \"query\":\"%q\", \"method\":\"%m\", \"status\":\"%>s\", \"userAgent\":\"%{User-agent}i\", \"referer\":\"%{Referer}i\" }" json_format   추가
-       - sudo nano /etc/apache2/sites-enabled/000-default.conf 에 Customlog “jsonaccess_log” json_format 추가 
+       - sudo nano /etc/apache2/sites-enabled/000-default.conf 에 Customlog “jsonaccess_log” json_format 추가
 
      - 재시작
 
      - apache가 제대로 되는지 작동 확인.
 
-       - 192.168.56.101 브라우저 접속 
+       - 192.168.56.101 브라우저 접속
 
          ![virtual-log](virtual_json_log.png)
 
-2. logstash-5.1.2 설치 
+2. logstash-5.1.2 설치
 
    1. wget <https://artifacts.elastic.co/downloads/logstash/logstash-5.1.2.tar.gz>
    2. Mkdir /logstash/conf, touch apache.conf
@@ -197,7 +198,7 @@ main-class: 'elastic search'
    5. ps -ef | grep elasticsearch 수행 후 Process가 있다면 수행된 것이다.
    6. curl -XGET localhost:9200/_cluster/health?pretty=true
       - Status 가 Green 또는 OK 가 수행되야 성공.
-   7. 웹으로도 확인 가능 http://192.168.56.101:9200 으로 수행 하면 Status가 포함된 Json이 결과로 나와야한다. 
+   7. 웹으로도 확인 가능 http://192.168.56.101:9200 으로 수행 하면 Status가 포함된 Json이 결과로 나와야한다.
       - 안된다면 외부 접근이 금지 된 것인데 config/elasticsearch.yml 파일 내 network.host를 0.0.0.0 으로 변경
    8. 수행이 되지 않을 경우 log폴더의 elasticsearch.log 를 확인한 후 vm.max_map_count 와 같은 에러가 발생한다면
       - sudo sysctl -w vm.max_map_count=262144 를 수행.
@@ -206,19 +207,19 @@ main-class: 'elastic search'
    1. tar -xf kibana-5.1.2-linux-x86_64.tar.gz
    2. mv kibana-5.1.2-linux-x86_64/ kibana
    3. kibana/config/kibana.yml 내 server.host=0.0.0.0 으로 변경하여야 외부에서 접근이 가능하다. (웹에서)
-   4. 실행파일 생성 
+   4. 실행파일 생성
       echo "/home/ubuntu/kibana/bin/kibana > /dev/null 2>&1&" > /home/ubuntu/kibana/bin/kibana_start.sh.  << 폴더명은 하고 싶은 것으로 변경 가능.
    5. chmod 700 kibana_start.sh
    6. ps -ef | grep kibana 확인 후 웹으로 5601 포트로 접속
-   7. 화면이 나온다면 무사이 설치 완료 
+   7. 화면이 나온다면 무사이 설치 완료
 
 
 
-### Log 전송 
+### Log 전송
 
 --------------
 
-- Log를 logstash 를 통해 Elasticsearch로 전송 
+- Log를 logstash 를 통해 Elasticsearch로 전송
 
 - Webserver 의 nano ./logstash/conf/apache.conf 내 output 부분에 아래를 추가. (주석처리를 해놓거나 했다면 주석을 풀면된다.)
 
@@ -226,9 +227,9 @@ main-class: 'elastic search'
     ​                hosts=>"192.168.56.102:9200"  // IP부분에 원하는 IP를 설정하면 된다.
     ​        }
   - 다시 logstash를 실행 (실행 방법은 아까와 동일)
-  - 실행이 된다면 로그가 출력이 되고 마지막 부분에 
+  - 실행이 된다면 로그가 출력이 되고 마지막 부분에
     [logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
-    이와 같은 출력이 나올 것이다. 
+    이와 같은 출력이 나올 것이다.
 
 - Kibana를 통해 로그가 들어왔는지 확인해보자.
 
@@ -236,7 +237,7 @@ main-class: 'elastic search'
 
   ![kibana](/src/201708/ELK/kibana_check.png)
 
-  - 생성 후 웹서버의 Index 페이지를 리플레쉬 또는 재접속을 하는 방식으로 데이터 입력을 확인 할 수 있다. 
+  - 생성 후 웹서버의 Index 페이지를 리플레쉬 또는 재접속을 하는 방식으로 데이터 입력을 확인 할 수 있다.
   - Row 데이터는 Discover 부분에서 확인가능하다.
     ![kibana2](/src/201708/ELK/kibana_check2.png)
 
@@ -246,5 +247,5 @@ main-class: 'elastic search'
 
 ## 마치며
 
-- 간단히 설치가 가능한 부분이지만… 이 부분을 진행하기까지 이틀 정도 삽질을 했더니 … 어질어질합니다… 
-- 처음 시작하시는 분들에게 도움이 되길 바라며 ^^ 
+- 간단히 설치가 가능한 부분이지만… 이 부분을 진행하기까지 이틀 정도 삽질을 했더니 … 어질어질합니다…
+- 처음 시작하시는 분들에게 도움이 되길 바라며 ^^
